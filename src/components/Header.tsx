@@ -3,8 +3,8 @@
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Menu, X, ArrowUpRight, ChevronRight, ChevronDown, UtensilsCrossed, Zap, Flame, Phone } from "lucide-react";
-import { BRANDS, CONTACT_DETAILS } from "@/lib/constants";
+import { Menu, X, ArrowUpRight, ChevronRight, ChevronDown } from "lucide-react";
+import { BRANDS } from "@/lib/constants";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -51,29 +51,21 @@ export default function Header() {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
-            {/* LEFT: MAXWELL GROUP Wordmark / Text Logo */}
+            {/* LEFT: MAXWELL GROUP Official Logo */}
             <Link
               href="#"
-              className="flex items-center gap-3.5 group focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 rounded-sm shrink-0"
+              className="flex items-center group focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 rounded-sm shrink-0"
               aria-label="Maxwell Group Homepage"
             >
-              <div className="w-9 h-9 rounded-sm bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800 border border-slate-700/80 flex items-center justify-center text-white shadow-sm group-hover:scale-105 transition-transform duration-200 shrink-0">
-                <span className="font-extrabold text-sm text-sky-400">M</span>
-                <span className="w-1.5 h-1.5 rounded-full bg-red-500 ml-0.5 animate-pulse"></span>
-              </div>
-
-              <div className="flex flex-col">
-                <div className="flex items-center gap-1.5 leading-none">
-                  <span className="text-lg sm:text-xl font-extrabold text-slate-950 uppercase font-jakarta">
-                    MAXWELL
-                  </span>
-                  <span className="text-lg sm:text-xl font-medium text-slate-600 uppercase font-jakarta">
-                    GROUP
-                  </span>
-                </div>
-                <span className="text-[9px] font-medium text-slate-500 uppercase mt-0.5">
-                  Parent Corporate Identity
-                </span>
+              <div className="relative h-11 sm:h-12 w-auto flex items-center">
+                <Image
+                  src="/images/maxwell-group-logo.png"
+                  alt="Maxwell Group - Integrated Engineering & Food Equipment Solutions"
+                  width={240}
+                  height={48}
+                  className="h-10 sm:h-11 w-auto object-contain transition-transform duration-200 group-hover:scale-[1.02]"
+                  priority
+                />
               </div>
             </Link>
 
@@ -111,9 +103,6 @@ export default function Header() {
                   }`}
                 >
                   <span className="whitespace-nowrap">Our Brands</span>
-                  <span className="inline-flex items-center justify-center px-1.5 py-0.5 rounded-full bg-sky-100 text-[10px] font-bold text-sky-700 leading-none">
-                    3
-                  </span>
                   <ChevronDown
                     className={`w-3.5 h-3.5 transition-transform duration-200 shrink-0 ${
                       brandsDropdownOpen ? "rotate-180 text-sky-600" : "text-slate-400"
@@ -134,7 +123,9 @@ export default function Header() {
                     <div className="space-y-1.5">
                       {/* Vector */}
                       <a
-                        href="#vector"
+                        href="https://www.vectorfoodequipments.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         onClick={() => setBrandsDropdownOpen(false)}
                         className="group flex items-center gap-3 p-2.5 rounded-sm hover:bg-slate-50 transition-colors border border-transparent hover:border-slate-200"
                       >
@@ -192,7 +183,9 @@ export default function Header() {
 
                       {/* SK Power Cook */}
                       <a
-                        href="#sk-powercook"
+                        href="https://www.skpcm.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         onClick={() => setBrandsDropdownOpen(false)}
                         className="group flex items-center gap-3 p-2.5 rounded-sm hover:bg-slate-50 transition-colors border border-transparent hover:border-slate-200"
                       >
@@ -235,20 +228,11 @@ export default function Header() {
               ))}
             </nav>
 
-            {/* RIGHT: Quick Contact & CTA Button */}
+            {/* RIGHT: CTA Button */}
             <div className="hidden lg:flex items-center gap-3 shrink-0">
               <a
-                href="tel:+918925857821"
-                className="hidden xl:inline-flex items-center gap-2 px-3 py-2 text-xs font-semibold text-slate-700 hover:text-sky-700 transition-colors whitespace-nowrap shrink-0"
-                title="Call Maxwell Group: +91 89258 57821 / +91 89258 57824"
-              >
-                <Phone className="w-3.5 h-3.5 text-sky-600 shrink-0" />
-                <span className="whitespace-nowrap">+91 89258 57821</span>
-              </a>
-
-              <a
                 href="#contact"
-                className="inline-flex items-center gap-1.5 px-4 py-2.5 text-xs font-semibold uppercase whitespace-nowrap shrink-0 rounded-sm bg-gradient-to-r from-sky-600 via-blue-600 to-blue-700 text-white shadow-md shadow-sky-600/20 hover:from-sky-500 hover:to-blue-600 transition-all hover:scale-[1.02] active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-sky-400"
+                className="inline-flex items-center gap-1.5 px-4 py-2.5 text-xs font-semibold uppercase whitespace-nowrap shrink-0 rounded-sm bg-gradient-to-r from-[#011b3b] via-[#06305d] to-[#0d4783] text-white shadow-md shadow-[#011b3b]/30 hover:from-[#042852] hover:via-[#0a3d74] hover:to-[#125497] border border-[#0d4783]/40 transition-all hover:scale-[1.02] active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-[#06305d]"
               >
                 <span>Get in Touch</span>
                 <ChevronRight className="w-3.5 h-3.5 text-sky-200 shrink-0" />
@@ -282,20 +266,14 @@ export default function Header() {
           <div className="fixed inset-y-0 right-0 w-full max-w-sm bg-white border-l border-slate-200 shadow-2xl p-6 flex flex-col justify-between overflow-y-auto z-10">
             <div>
               <div className="flex items-center justify-between pb-6 border-b border-slate-200">
-                <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-sm bg-slate-900 border border-slate-800 flex items-center justify-center text-white">
-                    <span className="font-extrabold text-xs text-sky-400">M</span>
-                    <span className="w-1 h-1 rounded-full bg-red-500 ml-0.5"></span>
-                  </div>
-                  <div className="flex flex-col">
-                    <div className="flex items-center gap-1.5 leading-none">
-                      <span className="text-base font-extrabold text-slate-950">MAXWELL</span>
-                      <span className="text-base font-medium text-slate-600">GROUP</span>
-                    </div>
-                    <span className="text-[9px] text-slate-500 uppercase mt-0.5">
-                      Parent Identity
-                    </span>
-                  </div>
+                <div className="relative h-10 w-auto flex items-center">
+                  <Image
+                    src="/images/maxwell-group-logo.png"
+                    alt="Maxwell Group"
+                    width={200}
+                    height={40}
+                    className="h-9 w-auto object-contain"
+                  />
                 </div>
                 <button
                   type="button"
@@ -384,7 +362,7 @@ export default function Header() {
               <a
                 href="#contact"
                 onClick={() => setMobileMenuOpen(false)}
-                className="block w-full text-center py-2.5 px-4 rounded-sm text-xs font-bold uppercase bg-gradient-to-r from-sky-600 to-blue-700 text-white hover:from-sky-500 hover:to-blue-600 shadow-md shadow-sky-600/20"
+                className="block w-full text-center py-2.5 px-4 rounded-sm text-xs font-bold uppercase bg-gradient-to-r from-[#011b3b] via-[#06305d] to-[#0d4783] text-white hover:from-[#042852] hover:via-[#0a3d74] hover:to-[#125497] shadow-md shadow-[#011b3b]/30 border border-[#0d4783]/40"
               >
                 Connect With Maxwell Group
               </a>

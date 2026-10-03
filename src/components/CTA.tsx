@@ -30,10 +30,10 @@ export default function CTA() {
         <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
           <a
             href="#brands"
-            className="inline-flex items-center justify-center gap-2.5 px-8 py-3.5 rounded-sm bg-gradient-to-r from-sky-600 via-blue-600 to-blue-700 text-white font-semibold text-sm uppercase shadow-lg shadow-sky-600/25 hover:from-sky-500 hover:to-blue-600 border border-sky-500/30 transition-all hover:scale-[1.02] active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-sky-500"
+            className="inline-flex items-center justify-center gap-2.5 px-8 py-3.5 rounded-sm bg-gradient-to-r from-[#011b3b] via-[#06305d] to-[#0d4783] text-white font-semibold text-sm uppercase shadow-lg shadow-[#011b3b]/30 hover:from-[#042852] hover:via-[#0a3d74] hover:to-[#125497] border border-[#0d4783]/40 transition-all hover:scale-[1.02] active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-[#06305d]"
           >
             <span>Explore Our Brands</span>
-            <ChevronRight className="w-4 h-4 text-sky-100" />
+            <ChevronRight className="w-4 h-4 text-sky-200" />
           </a>
 
           <a

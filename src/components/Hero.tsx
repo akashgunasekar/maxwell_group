@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import { ArrowDown, ChevronRight, UtensilsCrossed, Zap, Flame, ExternalLink, ShieldCheck, CheckCircle2 } from "lucide-react";
+import { ArrowDown, ChevronRight, UtensilsCrossed, Zap, Flame, ExternalLink, CheckCircle2 } from "lucide-react";
 import { BRANDS } from "@/lib/constants";
 
 export default function Hero() {
@@ -66,10 +66,13 @@ export default function Hero() {
           <div className="lg:col-span-6 xl:col-span-6">
             {/* Live Parent Identity Eyebrow */}
             <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-slate-50 border border-slate-200 shadow-2xs mb-6 backdrop-blur-md">
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-sky-600"></span>
-              </span>
+              <Image
+                src="/images/maxwell-group-emblem.png"
+                alt="Maxwell Group"
+                width={24}
+                height={16}
+                className="w-4 h-auto object-contain shrink-0"
+              />
               <span className="text-[11px] font-bold uppercase text-slate-800 font-jakarta">
                 MAXWELL GROUP · PARENT CORPORATE IDENTITY
               </span>
@@ -94,7 +97,7 @@ export default function Hero() {
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <a
                 href="#brands"
-                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-sm bg-gradient-to-r from-sky-600 via-blue-600 to-blue-700 text-white font-semibold text-xs sm:text-sm uppercase shadow-lg shadow-sky-600/25 hover:from-sky-500 hover:to-blue-600 transition-all hover:scale-[1.02] active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-sky-500"
+                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-sm bg-gradient-to-r from-[#011b3b] via-[#06305d] to-[#0d4783] text-white font-semibold text-xs sm:text-sm uppercase shadow-lg shadow-[#011b3b]/30 hover:from-[#042852] hover:via-[#0a3d74] hover:to-[#125497] border border-[#0d4783]/40 transition-all hover:scale-[1.02] active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-[#06305d]"
               >
                 <span>Explore Our 3 Brands</span>
                 <ChevronRight className="w-4 h-4 text-sky-200" />
@@ -234,16 +237,12 @@ export default function Hero() {
 
                     <a
                       href={activeBrand.websiteUrl}
-                      target={activeBrand.isExternal ? "_blank" : undefined}
-                      rel={activeBrand.isExternal ? "noopener noreferrer" : undefined}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="inline-flex items-center gap-1 text-[11px] font-bold uppercase text-sky-300 hover:text-white transition-colors shrink-0 ml-2"
                     >
-                      <span>{isMaxwell ? "Visit Site" : "Explore"}</span>
-                      {isMaxwell ? (
-                        <ExternalLink className="w-3 h-3" />
-                      ) : (
-                        <ChevronRight className="w-3.5 h-3.5" />
-                      )}
+                      <span>Visit Site</span>
+                      <ExternalLink className="w-3 h-3" />
                     </a>
                   </div>
                 </div>

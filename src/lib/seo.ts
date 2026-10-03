@@ -1,11 +1,11 @@
 export const siteConfig = {
   name: "Maxwell Group",
   shortName: "Maxwell Group",
-  tagline: "One Group. Specialized Solutions.",
+  tagline: "Integrated Engineering & Food Equipment Solutions",
   description:
     "Maxwell Group brings together specialized brands providing commercial kitchen equipment, induction technology and engineered food-processing solutions.",
   url: "https://maxwellgroup.example",
-  ogImage: "https://maxwellgroup.example/images/hero_commercial_kitchen.jpg",
+  ogImage: "https://maxwellgroup.example/images/maxwell-group-logo.png",
   brandNames: [
     "Vector Food Equipments",
     "Maxwell Induction",
@@ -44,7 +44,7 @@ export function getOrganizationJsonLd() {
     alternateName: "Maxwell Engineering Group",
     description: siteConfig.description,
     url: siteConfig.url,
-    logo: `${siteConfig.url}/brands/maxwell-induction.png`,
+    logo: `${siteConfig.url}/images/maxwell-group-logo.png`,
     address: {
       "@type": "PostalAddress",
       streetAddress: siteConfig.contact.address.streetAddress,
@@ -67,7 +67,7 @@ export function getOrganizationJsonLd() {
         "@type": "Organization",
         name: "Vector Food Equipments",
         description: "Complete commercial kitchen equipment and kitchen solutions.",
-        url: "https://vector-food-equipments.example/",
+        url: "https://www.vectorfoodequipments.com/",
       },
       {
         "@type": "Organization",
@@ -81,7 +81,7 @@ export function getOrganizationJsonLd() {
         name: "SK Power Cook Machinery",
         description:
           "Engineered solutions for commercial food processing and industrial cooking machinery.",
-        url: "https://sk-powercook.example/",
+        url: "https://www.skpcm.com/",
       },
     ],
   };

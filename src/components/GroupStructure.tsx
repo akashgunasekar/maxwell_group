@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ArrowRight, UtensilsCrossed, Zap, Flame, ExternalLink } from "lucide-react";
+import { UtensilsCrossed, Zap, Flame, ExternalLink } from "lucide-react";
 
 export default function GroupStructure() {
   return (
@@ -32,12 +32,17 @@ export default function GroupStructure() {
           {/* Top Parent Node: MAXWELL GROUP */}
           <div className="flex justify-center">
             <div className="w-full max-w-md p-6 rounded-sm bg-white border-2 border-slate-300 text-center shadow-lg relative">
-              <div className="inline-block px-3 py-1 rounded-sm bg-slate-100 border border-slate-200 text-[10px] font-bold uppercase text-slate-700 mb-2">
+              <div className="inline-block px-3 py-1 rounded-sm bg-slate-100 border border-slate-200 text-[10px] font-bold uppercase text-slate-700 mb-3">
                 Parent Identity
               </div>
-              <div className="flex items-center justify-center gap-2">
-                <span className="text-2xl font-black text-slate-950 font-jakarta">MAXWELL</span>
-                <span className="text-2xl font-light text-slate-700 font-jakarta">GROUP</span>
+              <div className="flex justify-center mb-2">
+                <Image
+                  src="/images/maxwell-group-logo.png"
+                  alt="Maxwell Group - Integrated Engineering & Food Equipment Solutions"
+                  width={260}
+                  height={52}
+                  className="h-12 w-auto object-contain"
+                />
               </div>
               <p className="text-xs text-slate-500 mt-1 font-medium">
                 Strategic Stewardship · Shared Standards · Unified Oversight
@@ -92,11 +97,13 @@ export default function GroupStructure() {
 
               <div className="mt-6 pt-4 border-t border-slate-100">
                 <a
-                  href="#vector"
+                  href="https://www.vectorfoodequipments.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center gap-1.5 text-xs font-semibold text-red-700 hover:text-red-800"
                 >
-                  <span>Explore Vector</span>
-                  <ArrowRight className="w-3.5 h-3.5" />
+                  <span>Visit vectorfoodequipments.com</span>
+                  <ExternalLink className="w-3.5 h-3.5" />
                 </a>
               </div>
             </div>
@@ -181,11 +188,13 @@ export default function GroupStructure() {
 
               <div className="mt-6 pt-4 border-t border-slate-100">
                 <a
-                  href="#sk-powercook"
+                  href="https://www.skpcm.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center gap-1.5 text-xs font-semibold text-orange-700 hover:text-orange-800"
                 >
-                  <span>Explore SK Power Cook</span>
-                  <ArrowRight className="w-3.5 h-3.5" />
+                  <span>Visit skpcm.com</span>
+                  <ExternalLink className="w-3.5 h-3.5" />
                 </a>
               </div>
             </div>

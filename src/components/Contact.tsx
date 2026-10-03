@@ -227,14 +227,14 @@ export default function Contact() {
                 <button
                   type="submit"
                   disabled={submitting}
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-sm bg-gradient-to-r from-sky-600 via-blue-600 to-blue-700 text-white font-semibold text-xs uppercase shadow-md shadow-sky-600/20 hover:from-sky-500 hover:to-blue-600 border border-sky-500/30 transition-all hover:scale-[1.01] active:scale-[0.99] disabled:opacity-50"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-sm bg-gradient-to-r from-[#011b3b] via-[#06305d] to-[#0d4783] text-white font-semibold text-xs uppercase shadow-md shadow-[#011b3b]/30 hover:from-[#042852] hover:via-[#0a3d74] hover:to-[#125497] border border-[#0d4783]/40 transition-all hover:scale-[1.01] active:scale-[0.99] disabled:opacity-50 focus:outline-none focus:ring-2 focus:ring-[#06305d]"
                 >
                   {submitting ? (
                     <span>Submitting...</span>
                   ) : (
                     <>
                       <span>Send Enquiry</span>
-                      <Send className="w-3.5 h-3.5 text-sky-100" />
+                      <Send className="w-3.5 h-3.5 text-sky-200" />
                     </>
                   )}
                 </button>
@@ -275,7 +275,13 @@ export default function Contact() {
                     Direct Phone Lines
                   </h4>
                   <p className="mt-1 text-sm font-semibold text-slate-900">
-                    {CONTACT_DETAILS.phone}
+                    <a href="tel:+918925857821" className="hover:text-sky-700 transition-colors">
+                      +91 89258 57821
+                    </a>
+                    <span className="text-slate-400 mx-2">/</span>
+                    <a href="tel:+918925857824" className="hover:text-sky-700 transition-colors">
+                      +91 89258 57824
+                    </a>
                   </p>
                   <p className="text-[11px] text-slate-500 mt-0.5">
                     Product sales, technical support, and group enquiries

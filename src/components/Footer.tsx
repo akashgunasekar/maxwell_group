@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
-import { BRANDS } from "@/lib/constants";
+import { BRANDS, CONTACT_DETAILS } from "@/lib/constants";
 
 export default function Footer() {
   const quickLinks = [
@@ -21,17 +21,15 @@ export default function Footer() {
           {/* Col 1: Group Identity & Statement */}
           <div className="lg:col-span-4">
             <Link href="#" className="inline-block group mb-4">
-              <div className="flex items-center gap-1.5">
-                <span className="text-xl font-extrabold text-slate-950 uppercase font-jakarta">
-                  MAXWELL
-                </span>
-                <span className="text-xl font-medium text-slate-600 uppercase font-jakarta">
-                  GROUP
-                </span>
+              <div className="relative h-11 w-auto max-w-[240px] flex items-center">
+                <Image
+                  src="/images/maxwell-group-logo.png"
+                  alt="Maxwell Group - Integrated Engineering & Food Equipment Solutions"
+                  width={240}
+                  height={48}
+                  className="h-10 w-auto object-contain transition-transform duration-200 group-hover:scale-[1.02]"
+                />
               </div>
-              <span className="text-[10px] font-medium text-slate-500 uppercase block mt-0.5">
-                Parent Corporate Identity
-              </span>
             </Link>
 
             <p className="text-slate-600 text-xs sm:text-sm leading-relaxed max-w-sm mt-3">
@@ -43,8 +41,9 @@ export default function Footer() {
               fabrication, and heavy-duty food processing machinery.
             </p>
 
-            {/* Social Links (Placeholders) */}
+            {/* Social Links */}
             <div className="flex items-center gap-3 mt-6">
+
               {/* LinkedIn */}
               <a
                 href="#contact"
@@ -152,10 +151,12 @@ export default function Footer() {
             <p className="text-xs text-slate-600 leading-relaxed">
               Industrial Corridor, Mel Ayanambakkam, Chennai, Tamil Nadu, India.
             </p>
-            <div className="mt-4 pt-3 border-t border-slate-200">
-              <span className="inline-block px-2 py-1 rounded-sm bg-white border border-slate-200 text-[10px] font-mono text-slate-700 shadow-2xs">
-                B2B Industrial Group
-              </span>
+            <div className="mt-3 pt-3 border-t border-slate-200 text-xs">
+              <p className="text-slate-700">
+                <span className="font-semibold text-slate-900">Phone: </span>
+                <a href={`tel:${CONTACT_DETAILS.phone1}`} className="hover:text-sky-700">{CONTACT_DETAILS.phone1}</a> /{" "}
+                <a href={`tel:${CONTACT_DETAILS.phone2}`} className="hover:text-sky-700">{CONTACT_DETAILS.phone2}</a>
+              </p>
             </div>
           </div>
         </div>

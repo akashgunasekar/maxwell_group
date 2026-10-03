@@ -9,6 +9,7 @@ import GroupStructure from "@/components/GroupStructure";
 import CTA from "@/components/CTA";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import WhatsAppFloating from "@/components/WhatsAppFloating";
 
 export default function Home() {
   return (
@@ -46,8 +47,11 @@ export default function Home() {
         <Contact />
       </main>
 
-      {/* Premium Dark Corporate Footer */}
+      {/* Premium Corporate Footer */}
       <Footer />
+
+      {/* Floating Instant WhatsApp Support (+91 89258 57824) */}
+      <WhatsAppFloating />
     </div>
   );
 }

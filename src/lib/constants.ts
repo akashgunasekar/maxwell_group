@@ -18,6 +18,14 @@ export interface BrandInfo {
   keyStats: { label: string; value: string }[];
 }
 
+export const PARENT_GROUP = {
+  name: "Maxwell Group",
+  tagline: "Integrated Engineering & Food Equipment Solutions",
+  logo: "/images/maxwell-group-logo.png",
+  logoLight: "/images/maxwell-group-logo-light.png",
+  emblem: "/images/maxwell-group-emblem.png",
+};
+
 export const BRANDS: BrandInfo[] = [
   {
     id: "vector",
@@ -26,7 +34,7 @@ export const BRANDS: BrandInfo[] = [
     descriptor: "Complete Commercial Kitchen Solutions",
     description:
       "Vector provides commercial kitchen equipment and solutions across cooking, bakery and pantry, refrigeration, dishwashing, processing, storage, preparation, steam systems, fabrication and kitchen infrastructure.",
-    websiteUrl: "https://vector-food-equipments.example/",
+    websiteUrl: "https://www.vectorfoodequipments.com/",
     isExternal: true,
     accentColor: "#DC2626",
     accentGradient: "from-rose-600 to-red-600",
@@ -86,7 +94,7 @@ export const BRANDS: BrandInfo[] = [
     descriptor: "Engineered Solutions for Commercial Food Processing",
     description:
       "Specialized machinery solutions for commercial food-processing applications.",
-    websiteUrl: "https://sk-powercook.example/",
+    websiteUrl: "https://www.skpcm.com/",
     isExternal: true,
     accentColor: "#EA580C",
     accentGradient: "from-amber-500 to-orange-600",
@@ -251,6 +259,10 @@ export const CONTACT_DETAILS = {
   officeTitle: "Maxwell Group Corporate Operations",
   address: "PKM Industrial Complex, Mel Ayanambakkam, Chennai – 600 095, Tamil Nadu, India",
   phone: "+91 89258 57821 / +91 89258 57824",
+  phone1: "+91 89258 57821",
+  phone2: "+91 89258 57824",
+  whatsapp: "+91 89258 57824",
+  whatsappUrl: "https://wa.me/918925857824?text=Hello%20Maxwell%20Group%2C%20I%20would%20like%20to%20inquire%20about%20your%20commercial%20kitchen%20and%20food%20processing%20solutions.",
   email: "contact@maxwellgroup.example",
   inductionEmail: "sales@maxwellinduction.com",
   workingHours: "Monday – Saturday: 9:00 AM – 6:30 PM IST",

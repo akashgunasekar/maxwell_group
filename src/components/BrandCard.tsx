@@ -188,16 +188,20 @@ export default function BrandCard({ brand, index }: BrandCardProps) {
             isVector
               ? "bg-red-600 hover:bg-red-700 text-white shadow-md shadow-red-600/20 focus:ring-red-400"
               : isMaxwell
-              ? "bg-gradient-to-r from-sky-600 to-blue-700 hover:from-sky-500 hover:to-blue-600 text-white shadow-md shadow-sky-600/20 focus:ring-sky-400"
+              ? "bg-gradient-to-r from-[#011b3b] via-[#06305d] to-[#0d4783] hover:from-[#042852] hover:via-[#0a3d74] hover:to-[#125497] text-white shadow-md shadow-[#011b3b]/30 border border-[#0d4783]/40 focus:ring-[#06305d]"
               : "bg-gradient-to-r from-orange-600 to-amber-600 hover:from-orange-500 hover:to-amber-500 text-white shadow-md shadow-orange-600/20 focus:ring-orange-400"
           }`}
         >
           <span>
-            {isVector ? "Explore Vector" : isMaxwell ? "Visit Maxwell Induction" : "Explore SK Power Cook"}
+            {isVector ? "Visit Vector" : isMaxwell ? "Visit Maxwell Induction" : "Visit SK Power Cook"}
           </span>
           <div className="flex items-center gap-1">
             <span className="text-[10px] opacity-90">
-              {isMaxwell ? "maxwellinduction.com" : "Dedicated Brand Portal"}
+              {isVector
+                ? "vectorfoodequipments.com"
+                : isMaxwell
+                ? "maxwellinduction.com"
+                : "skpcm.com"}
             </span>
             <ExternalLink className="w-3.5 h-3.5 ml-1" />
           </div>
